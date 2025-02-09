@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* .row{
+    background: #121212;
+} */
+
+.col{
+    background: #121212;
+    color: white;
+}
