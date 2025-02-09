@@ -21,19 +21,22 @@
                 <!-- HTML Button -->
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="html-tab" data-bs-toggle="tab" data-bs-target="#html" type="button" role="tab" aria-controls="html" aria-selected="true">HTML</button>
+                        <button class="nav-link active" id="html-tab" data-bs-toggle="tab" data-bs-target="#html"
+                            type="button" role="tab" aria-controls="html" aria-selected="true">HTML</button>
                     </li>
 
 
                     <!-- CSS Button -->
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="css-tab" data-bs-toggle="tab" data-bs-target="#css" type="button" role="tab" aria-controls="css" aria-selected="false">CSS</button>
+                        <button class="nav-link" id="css-tab" data-bs-toggle="tab" data-bs-target="#css" type="button"
+                            role="tab" aria-controls="css" aria-selected="false">CSS</button>
                     </li>
 
 
                     <!-- JS Button -->
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="js-tab" data-bs-toggle="tab" data-bs-target="#js" type="button" role="tab" aria-controls="js" aria-selected="false">JS</button>
+                        <button class="nav-link" id="js-tab" data-bs-toggle="tab" data-bs-target="#js" type="button"
+                            role="tab" aria-controls="js" aria-selected="false">JS</button>
                     </li>
                 </ul>
 
@@ -41,8 +44,8 @@
 
                 <!-- Tab Content -->
                 <div class="tab-content" id="myTabContent">
-                    
-                    
+
+
                     <!-- HTML Tab -->
                     <div class="tab-pane fade show active" id="html" role="tabpanel" aria-labelledby="html-tab">
                         <pre><code id="html-code"></code></pre>
@@ -71,49 +74,8 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-
-
-
-            // Function to remove Live Server code
-            function removeLiveServerCode(html) {
-                const liveServerScript = /<script src="\/livereload.js\?snipver=1"><\/script>/;
-                return html.replace(liveServerScript, '');
-            }
-
-
-
-            // Load the HTML file dynamically
-            fetch('public/html-file.html')
-                .then(response => response.text())
-                .then(data => {
-                    const cleanedData = removeLiveServerCode(data);
-                    document.getElementById('html-code').textContent = cleanedData;
-                });
-
-
-
-            // Load the CSS file dynamically
-            fetch('public/css-file.css')
-                .then(response => response.text())
-                .then(data => document.getElementById('css-code').textContent = data);
-
-
-
-            // Load the JS file dynamically
-            fetch('public/js-file.js')
-                .then(response => response.text())
-                .then(data => document.getElementById('js-code').textContent = data);
-
-
-                
-            // Update the iframe with the live preview
-            const iframe = document.getElementById('live-preview');
-            iframe.src = 'public/html-file.html';
-        });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="get-code.js"></script>
 </body>
 
 </html>
