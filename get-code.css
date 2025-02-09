@@ -11,3 +11,28 @@
     background: #121212;
     color: white;
 }
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.nav-tabs .nav-link {
+    color: #ffffff;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+pre {
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+iframe {
+    background-color: #ffffff;
+}
