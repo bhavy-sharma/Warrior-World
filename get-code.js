@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
 
 
+    //Project ID dynamically fill
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get("projectId");
+
 
     // Function to remove Live Server code
     function removeLiveServerCode(html) {
@@ -11,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Load the HTML file dynamically
-    fetch(`public/html-file.html`)
+    fetch(`public/${projectId}/html-file.html`)
         .then(response => response.text())
         .then(data => {
             const cleanedData = removeLiveServerCode(data);
@@ -21,14 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Load the CSS file dynamically
-    fetch('public/css-file.css')
+    fetch(`public/${projectId}/css-file.css`)
         .then(response => response.text())
         .then(data => document.getElementById('css-code').textContent = data);
 
 
 
     // Load the JS file dynamically
-    fetch('public/js-file.js')
+    fetch(`public/${projectId}/js-file.js`)
         .then(response => response.text())
         .then(data => document.getElementById('js-code').textContent = data);
 
@@ -36,5 +40,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Update the iframe with the live preview
     const iframe = document.getElementById('live-preview');
-    iframe.src = 'public/html-file.html';
+    iframe.src = `public/${projectId}/html-file.html`;
 });
