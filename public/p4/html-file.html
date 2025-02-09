@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood tracker</title>
+    <link rel="stylesheet" href="css-file.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="face">
+        <div class="eyes">
+          <div class="brow-l"></div>
+          <div class="left"></div>
+          <div class="brow-r"></div>
+          <div class="right"></div>
+        </div>
+        <div class="mouth"></div>
+      </div>
+
+      <div class="buttons">
+        <button onclick="changeFace('smiley')">Show</button>
+        <button onclick="changeFace('noface')">Current</button>
+        <button onclick="changeFace('angry')">Common</button>
+        <button onclick="changeFace('wink')">Before</button>
+      </div>
+    </div>
+
+    <script>
+      function changeFace(expression) {
+        const page = document.querySelector(".page");
+        const face = document.querySelector(".face");
+        const left = document.querySelector(".left");
+        const right = document.querySelector(".right");
+        const browl = document.querySelector(".brow-l");
+        const browr = document.querySelector(".brow-r");
+        const mouth = document.querySelector(".mouth");
+        page.style.backgroundColor = 'pink';
+        face.style.opacity = '1';
+        face.style.backgroundColor = 'yellow';
+        left.style.backgroundColor = 'black';
+        left.style.borderRadius = '50%';
+        left.style.borderTop = '0';
+        left.style.width = '45px';
+        left.style.height = '45px';
+        left.style.top = '0';
+        right.style.backgroundColor = 'transparent';
+        right.style.borderTop = 'none';
+        right.style.borderRadius = '50%';
+        right.style.borderTop = '0';
+        right.style.width = '45px';
+        right.style.height = '45px';
+        right.style.top = '0';
+        mouth.style.borderBottom = '20px solid black';
+        mouth.style.borderRadius = '50%';
+        mouth.style.width = '100px';
+        mouth.style.borderTop = '0';
+        mouth.style.left = '50px';
+        mouth.style.top = '120px';
+        browl.style.backgroundColor = 'transparent';
+        browr.style.backgroundColor = 'transparent';
+
+        if (expression === 'wink') {
+          // Change to wink face
+          page.style.backgroundColor = 'blue';
+          right.style.backgroundColor = 'transparent';
+          right.style.borderTop = '10px solid black';
+          browr.style.transform = 'rotate(20deg)';
+          right.style.top = "8px";
+        } else if (expression === 'smiley') {
+          // Smiley face (default)
+          page.style.backgroundColor = 'lavender';
+          left.style.backgroundColor = 'black';
+          right.style.backgroundColor = 'black';
+          mouth.style.borderBottom = '20px solid black';
+          right.style.top = "0";
+        } else if (expression === 'noface') {
+            page.style.backgroundColor = 'lightcoral';
+            left.style.borderRadius = '0';
+            left.style.backgroundColor = 'transparent';
+            left.style.borderTop = '10px solid black';
+            left.style.width = '58px';
+            left.style.top = '10px';
+            right.style.borderRadius = '0';
+            right.style.backgroundColor = 'transparent';
+            right.style.borderTop = '10px solid black';
+            right.style.width = '55px';
+            right.style.top = '10px';
+            mouth.style.borderRadius = '0';
+            mouth.style.borderBottom = '10px solid black';
+        } else if (expression === 'angry') {
+            page.style.backgroundColor = 'gray';
+          right.style.backgroundColor = 'black';
+          mouth.style.borderTop = '10px solid black';
+          mouth.style.borderBottom= '0';
+          mouth.style.borderRadius = '70%';
+          mouth.style.width = '50px';
+          face.style.backgroundColor = 'red';
+          mouth.style.left = '73px';
+          mouth.style.top = '140px';
+        }
+      }
+    </script>
+  </body>
+</html>

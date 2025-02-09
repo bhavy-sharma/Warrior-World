@@ -10,6 +10,21 @@ h1{
 body{
     background-color: #A1E3F9;
 }  
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px #578FCA;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.card img {
+  border-radius: 15px;
+  height: 160px;
+  object-fit: cover;
+}
 .card-img-top {
   height: 300px;
 }

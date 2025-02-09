@@ -26,11 +26,14 @@ body {
     color: #ffffff;
 }
 
+/* y axis scroll bar for html code and set height 90vh for full screen  */
 pre {
+    height: 90vh;
     background-color: #1e1e1e;
     color: #dcdcdc;
     padding: 10px;
     border-radius: 5px;
+    overflow-y: scroll;
 }
 
 iframe {
