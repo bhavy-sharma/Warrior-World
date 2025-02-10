@@ -60,3 +60,15 @@ body{
     height: 100%;
     box-shadow: 7px 7px 10px #578FCA;
 }
+
+.card-text{
+  font-size: 12px;
+}
+
+.btn{
+  font-size: 10px;
+}
+
+.card-title{
+  font-size:18px;
+}
