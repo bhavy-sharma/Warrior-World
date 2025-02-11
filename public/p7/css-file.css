@@ -1,0 +1,59 @@
+h1{
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+}
+body{
+    background-color: black;
+}
+
+.base{
+    width: 300px;
+    height:300px;
+    border:2px dashed  yellow;
+    border-radius:50%;
+    margin: 250px 20px 20px 650px;
+    transition:all 3s ease-in-out 0s;
+
+}
+.base:hover{
+     
+     box-shadow: 4px 4px 8px skyblue;
+     background-color: yellow;
+     .eyes{
+        box-shadow: 3px 3px 6px white;
+        background-color: black;
+     }
+     #mouth{
+        box-shadow: 3px 3px 6px white;
+        background-color: red;
+     }    
+}
+.eyes{
+   width:50px;
+   height:50px;
+   border:2px dashed white;
+   border-radius:50%;
+   margin-left: 70px;
+   margin-top: 20px;
+   display: inline-block;
+   transition:all 3s ease-in-out 0s;
+
+}
+#right{
+    
+    margin-top: 80px;
+}
+#left{
+    margin-top:80px ;
+    margin-left:60px
+}
+#mouth{
+    width:200px;
+    height:50px;
+    border:2px dashed red;
+    border-radius: 2px 2px 30px 30px;
+    margin: 50px 20px 20px 50px ;
+    transition:all 3s ease-in-out 0s;
+}
+
