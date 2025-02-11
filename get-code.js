@@ -42,3 +42,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const iframe = document.getElementById('live-preview');
     iframe.src = `public/${projectId}/html-file.html`;
 });
+
+
+document.getElementById('download-button').addEventListener('click', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('projectId');
+    if (projectId) {
+    const a = document.createElement('a');
+    a.style.display = 'none';
+    a.href = `/zipped/${projectId}-zipped.zip`;
+    a.download = `${projectId}.zip`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    } else {
+    alert('Project ID not found.');
+    }
+});
