@@ -54,7 +54,6 @@ iframe {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    height: 80px;
 }
 
 .button:hover::before {
@@ -89,7 +88,10 @@ footer {
     justify-content: center;
     margin-top: 10px;
 }
-
+footer button{
+    display: block;
+    width: 100%;
+}
 @media (max-width: 768px) {
     .button {
         height: 2.5rem;
