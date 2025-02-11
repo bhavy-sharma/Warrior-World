@@ -85,25 +85,15 @@
             const urlParams = new URLSearchParams(window.location.search);
             const projectId = urlParams.get('projectId');
             if (projectId) {
-                fetch(`/public/${projectId}`)
-                    .then(response => {
-                        if (response.ok) {
-                            response.blob().then(blob => {
-                                const url = window.URL.createObjectURL(blob);
-                                const a = document.createElement('a');
-                                a.style.display = 'none';
-                                a.href = url;
-                                a.download = `${projectId}.zip`;
-                                document.body.appendChild(a);
-                                a.click();
-                                document.body.removeChild(a);
-                                window.URL.revokeObjectURL(url);
-                            });
-                        } else {
-                            alert('Project folder not found.');
-                        }
-                    })
-                    .catch(error => console.error('Error:', error));
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = `/zipped/${projectId}-zipped.zip`;
+            a.download = `${projectId}.zip`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            } else {
+            alert('Project ID not found.');
             }
         });
     </script>
