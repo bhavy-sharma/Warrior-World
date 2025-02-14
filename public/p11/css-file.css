@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .todo-container {
+    background-color: steelblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px black;
+    width: 300px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: black;
+  }
+  .todo-list {
+    list-style-type: none;
+    padding: 10px;
+  }
+  .todo-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid whitesmoke;
+  }
+  todo-list li:last-child {
+    border-bottom: none;
+  }
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: black;
+  }
+  
