@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container {
+    background: rgba(245, 248, 231, 0.365);
+    padding: 30px;
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px red;
+    text-align: center;
+}
+
+.title {
+    font-size: 50px;
+    color: red;
+    text-shadow: 3px 3px 10px black;
+    animation: blood-glow 1.5s infinite alternate;
+}
+
+.warning {
+    font-size: 30px;
+    color: red;
+    text-shadow: 3px 3px 10px black;
+    animation: shake 1s infinite alternate;
+}
+
+@keyframes blood-glow {
+    0% { text-shadow: 3px 3px 10px red; }
+    100% { text-shadow: 5px 5px 20px darkred; }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0px); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0px); }
+}
