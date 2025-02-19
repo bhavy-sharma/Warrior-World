@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: 100vh;
+  width: 100%;
+  background-color: aliceblue;
+}
+header h1{
+  height: 10vh;
+  width: 100%;
+  text-decoration: underline;
+  text-shadow: 3px 4px 10px greenyellow;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgb(255, 230, 0);
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  border: 3px solid black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.box h3 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.box {
+  border-radius: 20px;
+  text-align: center;
+  padding: 4px 10px;
+  font-size: 3.5rem;
+  height: 45%;
+  border: 4px solid blue;
+  background-color: burlywood;
+  height: max-content;
+  text-shadow: 4px 8px 7px palevioletred;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 10px;
+}
+.Gallery {
+  padding: 5px 10px;
+  height: 500px;
+}
+
+.Gallery img{
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 400ms;
+  fill-opacity: calc(1);
+  box-shadow: 10px 14px 17px rgb(255, 42, 0);
+}
+
+.Gallery img:hover {
+  filter: brightness(1.2);
+  transform: scale(1.2);
+  box-shadow: 10px 14px 17px rgb(255, 42, 0);
+}
+
+@media(max-width:720px){
+  header h1{
+    font-size: 1.5rem;
+  }
+  .box{
+    font-size: 2rem;
+  }
+  #container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+  .Gallery{
+    width: 100%;
+  }
+}
