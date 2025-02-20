@@ -1,0 +1,49 @@
+body{
+    background-image: url(/Warrior-World/public/p16/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    .calander{
+        margin:auto;
+        max-width: 1000px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        color: black;
+    
+    }
+    .month{
+        text-align: center;
+        background: white;
+        font-size:85px ;
+        letter-spacing: 2px;
+        color: black;
+        border:2px solid blueviolet;
+        
+    }
+    table,th,td{
+        width:100%;
+        table-layout: fixed;
+        text-align: center;
+        font-size: 30px;
+        border-collapse: collapse;
+        border: 7px solid black;
+        font-family: 'Times New Roman', Times, serif;
+    
+    }
+    tr,th,td{
+        padding:17px;
+    
+    }
+    th{
+        background: silver;
+        color:black;
+        font-family: fantasy;
+    }
+    td{
+        background: burlywood;
+        color:black;
+    }
+    td:hover{
+    background: yellowgreen;
+    }
+    
