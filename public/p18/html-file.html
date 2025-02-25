@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Cars Gallery</title>
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      line-height: 1.6;
+    }
+    
+    /* Header using Flexbox */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 2em;
+    }
+    
+    /* Gallery using CSS Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+    .gallery-item {
+      background: #fff;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .gallery-item:after hover {
+        transition: pop(transition,0,1);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery-item .caption {
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      background: #fafafa;
+    }
+    
+    /* Footer using Flexbox */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+      footer {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Cars Gallery</h1>
+  </header>
+  
+  <main>
+    <section class="gallery">
+      <div class="gallery-item">
+        <a href="form.html" >
+        <img src="images/jeep.jpg" alt="Car 1"  />
+        </a>
+        <div class="caption">jeep</div>
+      </div>
+      <div class="gallery-item">
+        <a href="form.html">
+        <img src="images/sedan.jpeg" alt="Car 2" />
+        </a>
+        <div class="caption">sedan</div>
+      </div>
+      <div class="gallery-item">
+        <a href="form.html">
+        <img src="images/hatch.jpeg" alt="Car 3" />
+        </a>
+        <div class="caption">hatchBack</div>
+      </div>
+      <div class="gallery-item">
+        <a href="form.html">
+        <img src="images/SUvs.jpeg" alt="Car 4" />
+        </a>
+        <div class="caption">SUVS</div>
+      </div>
+      <div class="gallery-item">
+        <a href="form.html">
+        <img src="images/convert.jpeg" alt="Car 5" />
+        </a>
+        <div class="caption">Convertable </div>
+      </div>
+      <div class="gallery-item">
+        <a href="form.html">
+        <img src="images/pickuptruck.jpeg" alt="Car 6" />
+        </a>
+        <div class="caption">pick up trucks </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 My Cars Gallery. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
