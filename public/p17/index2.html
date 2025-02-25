@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sakshi</title>
+    <link rel="stylesheet" href="css-file.css">
+</head>
+<body>
+    <!-- Ribbon Section -->
+    <div class="ribbon-container">
+        <div class="ribbon" id="ribbon">
+            <button id="cutRibbon" style="border: 2px solid black;">🎀</button>
+        </div>
+    </div>
+
+    <!-- Cake Section -->
+    <div class="cake-container hidden" id="cakeContainer">
+        <div class="cake">
+            <div class="layer layer1"></div>
+            <div class="layer layer2"></div>
+            <div class="layer layer3"></div>
+        </div>
+        
+        <div class="candles">
+            <div class="candle" id="candle1" onclick="extinguishCandle(1)">
+                <div class="flame" id="flame1"></div>
+            </div>
+            <div class="candle" id="candle2" onclick="extinguishCandle(2)">
+                <div class="flame" id="flame2"></div>
+            </div>
+            <div class="candle" id="candle3" onclick="extinguishCandle(3)">
+                <div class="flame" id="flame3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Birthday Message -->
+    <div id="birthdayMessage" class="hidden msg">
+        <h1></h1>
+        <p style="color: slategrey;"></p>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" autoplay>
+        <source src="music.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        const name = localStorage.getItem("userName");
+        const message = localStorage.getItem("userMessage");
+
+        if (name && message) {
+            document.querySelector("#birthdayMessage h1").textContent = name;
+            document.querySelector("#birthdayMessage p").textContent = message;
+        }
+    </script>
+    <script src="js-file.js"></script>
+</body>
+</html>

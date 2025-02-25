@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday!</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF4500;
+}
+
+.hidden {
+    display: none;
+}
+
+.msg h1 {
+    font-size: 36px;
+    color: #FF6347;
+}
+
+.msg p {
+    font-size: 18px;
+    color: #32CD32;
+}
+
+.cake-container {
+    margin-top: 30px;
+}
+
+/* Add other custom styles for your ribbon, candles, etc. */
+
+    </style>
+</head>
+<body>
+    <!-- Input Section for Birthday Message -->
+    <div class="input-section" style="text-align: center; margin-top: 50px;">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="userName" placeholder="Enter your name" style="padding: 10px; font-size: 16px;">
+        <br><br>
+        <h2>Enter Your Birthday message</h2>
+        <textarea id="userMessage" placeholder="Write a birthday message" rows="4" cols="50" style="padding: 10px; font-size: 16px;"></textarea>
+        <br><br>
+        <button onclick="submitMessage()">Submit</button>
+    </div>
+
+    <script>
+        function submitMessage() {
+            const name = document.getElementById("userName").value;
+            const message = document.getElementById("userMessage").value;
+            
+            if (name && message) {
+                localStorage.setItem("userName", name);
+                localStorage.setItem("userMessage", message);
+                
+                window.location.href = "index2.html";
+            } else {
+                alert("Please enter both your name and a birthday message!");
+            }
+        }
+    </script>
+</body>
+</html>
