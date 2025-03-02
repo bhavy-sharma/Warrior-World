@@ -1,0 +1,31 @@
+body{
+    background-color:blanchedalmond;
+}
+h1{
+    font-family:cursive;
+    text-align: justify;
+    text-align: center;
+    text-shadow: 4px 4px 2px rgb(212, 164, 164);
+}
+.kahani{
+    margin: 0 auto;
+    background-color: white;
+    width: 800px;
+    border-radius: 100px;
+    border: 7px dotted black;
+    box-shadow: 5px 5px 5px purple;
+    transition: border-style 5s ease-in-out, border-color 1s ease-in-out, border-radius 1s ease-in-out;
+}
+
+#btn{
+    margin-left: 600px;
+    background-color: purple;
+    width: 150px;
+    color: blueviolet;
+    border: 3px dotted black;
+}
+.kahani:hover{ 
+    border-style: dotted;
+    border-color: brown;
+    border-radius: 40px;
+}

@@ -1,0 +1,16 @@
+body{
+    background-image: url(https://img.freepik.com/free-vector/thank-you-card-with-hand-painted-watercolour-design_1048-20661.jpg);
+    background-size: contain;
+}
+div{
+    margin-top: 20%;
+    text-align: center;   
+}
+h1{
+    color: white;
+    -webkit-text-stroke: 1px purple;
+    font-family: cursive;
+    font-size: 40px;
+    text-shadow: 5px 5px purple;
+    text-decoration:overline;
+}
